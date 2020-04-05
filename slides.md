@@ -57,6 +57,14 @@ https://thenextweb.com/dd/2019/06/04/why-does-macos-catalina-use-zsh-instead-of-
 
 ---
 
+## dotfiles の何を話すのか
+
+TODO: メリットについて話す
+
+「環境構築で消耗していませんか？」
+
+---
+
 ## 管理手法が非常に多岐にわたっている
 
 ちょっと検索しただけでも、プログラマーごとに色が出過ぎている。
@@ -206,7 +214,7 @@ $ ls -a ~/.bashrc*
 
 ## .bash_profile と .bashrc の違い
 
-TODO:
+TODO: magicant さんの記事を引用する
 
 ---
 
