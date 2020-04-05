@@ -24,6 +24,10 @@ See https://github.com/jedcn/reveal-ck/wiki/Publishing-Slides
 
 Use gh-pages branch
 
+```
+git clone https://github.com/hnishi/slides-dotfiles.git --branch gh-pages --single-branch ./slides
+```
+
 ## Tips
 
 - To see presentation mode, press `s` while you're viewing the slides
