@@ -1,5 +1,7 @@
 ## Hello!
 
+:money_with_wings:
+
 +++
 
 ## Hola!
