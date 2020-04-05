@@ -45,24 +45,333 @@
   <div class="slides">
     <section>
 
-<h2>Hello!</h2>
+<h1>dotfiles</h1>
 
-<p><img class="emoji" alt=":money_with_wings:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4b8.png"></p>
-
-<p>+++</p>
-
-<h2>Hola!</h2>
-
-<p>😛</p>
+<p>Date: 2020-04-15<br>
+Speaker: Hiroshi Nishigami (hnishi)</p>
 
 </section>
 <section>
 
-<h2>Goodbye!</h2>
+<h2>近況</h2>
 
-<p>+++</p>
+<p><a href="https://www.pfu.fujitsu.com/direct/hhkb/detail_pd-kb800bs.html">HHKB (Happy Hacking Keyboard)</a><br>
+を買いました。 <img class="emoji" alt=":money_with_wings:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4b8.png"></p>
 
-<h2>Adiós!</h2>
+<p><img src="https://www.pfu.fujitsu.com/direct/hhkb/images/detail_pd-kb800bs-1.jpg" width="50%" style="background:none; border:none; box-shadow:none;"></p>
+
+</section>
+<section>
+
+<h2>はじめに</h2>
+
+<p>最近（去年１２月頃⛄️）、 <a href="https://qiita.com/hnishi/items/28ad11df1dde8b0ed368">自分の dotfiles を整理した</a> ため、共有しようと思いました。<br>
+（+ 3 ヶ月くらい使ってみて、ちょっとだけノウハウがたまったので）</p>
+
+</section>
+<section>
+
+<h2>対象</h2>
+
+<p>ターミナル (CLI) 初学者向けかもしれません。</p>
+
+</section>
+<section>
+
+<h2>dotfiles とは</h2>
+
+<ul>
+  <li>unix-like systems における設定ファイルのこと。</li>
+  <li>ファイル名がドット . から始まることに由来。</li>
+</ul>
+
+</section>
+<section>
+
+<h2>dotfiles の例</h2>
+
+<ul>
+  <li>.bash_profile</li>
+  <li>.bashrc</li>
+  <li>.zshrc</li>
+  <li>.asdfrc</li>
+  <li>.gitconfig</li>
+  <li>.vimrc</li>
+</ul>
+
+</section>
+<section>
+
+<h2>Catalina からデフォルトシェルが bash 👉 zsh に変わった</h2>
+
+<ul>
+  <li>Mojave では Bash 3.2 (GNU Bash) (2007年から)</li>
+  <li>なお、bash の開発は active で現在 version 5.0</li>
+  <li>新しい bash のライセンスは GPLv3</li>
+  <li>GPLv3 の制限が厳しい（独自ソフトでの使用禁止、特許絡みの問題）</li>
+  <li>ちなみに、zsh は MIT License</li>
+</ul>
+
+<p><a href="https://thenextweb.com/dd/2019/06/04/why-does-macos-catalina-use-zsh-instead-of-bash-licensing/">https://thenextweb.com/dd/2019/06/04/why-does-macos-catalina-use-zsh-instead-of-bash-licensing/</a></p>
+
+</section>
+<section>
+
+<h2>管理手法が非常に多岐にわたっている</h2>
+
+<p>ちょっと検索しただけでも、プログラマーごとに色が出過ぎている。</p>
+
+</section>
+<section>
+
+<h2>たとえば</h2>
+
+<ul>
+  <li><a href="https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b">ホームディレクトリをまるごと git で管理する方法</a></li>
+  <li><a href="https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2">make</a></li>
+  <li><a href="https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789">ruby</a></li>
+  <li><a href="https://pypi.org/project/dotfiles/">python</a></li>
+</ul>
+
+</section>
+<section>
+
+<h2>私の dotfiles 戦略</h2>
+
+<ul>
+  <li>最小構成のサーバーに対しても、すぐにdotfilesを展開できる</li>
+  <li>Mac, Linux, Windows (mintty) に対応</li>
+</ul>
+
+</section>
+<section>
+
+<h2>方針</h2>
+
+<ul>
+  <li>できるだけシンプルな構成にする</li>
+  <li>bash 依存のみ</li>
+</ul>
+
+</section>
+<section>
+
+<h2>成果物</h2>
+
+<p><a href="https://github.com/hnishi/dotfiles">https://github.com/hnishi/dotfiles</a></p>
+
+</section>
+<section>
+
+<h2>工夫</h2>
+
+<p>ワンラインのコマンド一発で、ダウンロードとインストールを行えるようにしました</p>
+
+</section>
+<section>
+
+<h2>ベース</h2>
+
+<p><a href="https://github.com/yutakatay/dotfiles-mini">bash だけで展開できる最小構成の dotfiles レポジトリ</a> を参考にさせてもらいました。</p>
+
+</section>
+<section>
+
+<h2>使い方</h2>
+
+<pre><code>curl -L raw.githubusercontent.com/hnishi/dotfiles/master/scripts/download.sh | bash
+</code></pre>
+
+<p><a href="https://github.com/hnishi/dotfiles/blob/master/scripts/download.sh">code</a></p>
+
+</section>
+<section>
+
+<h2>git がある場合</h2>
+
+<pre><code class="language-bash">    if is_exists "git"; then
+    # --recursive equals to ...
+    # git submodule init
+    # git submodule update
+    git clone --recursive "$DOTFILES_GITHUB" "$DOTPATH"
+</code></pre>
+
+</section>
+<section>
+
+<h2>curl がある場合</h2>
+
+<pre><code>    elif is_exists "curl" || is_exists "wget"; then
+    # curl or wget
+    local tarball="https://github.com/hnishi/dotfiles/archive/master.tar.gz"
+    if is_exists "curl"; then
+    curl -L "$tarball"
+</code></pre>
+
+</section>
+<section>
+
+<h2>wget がある場合</h2>
+
+<pre><code class="language-bash">    elif is_exists "wget"; then
+    wget -O - "$tarball"
+
+    fi | tar xvz
+    if [ ! -d dotfiles-master ]; then
+    log_fail "dotfiles-master: not found"
+    exit 1
+    fi
+    command mv -f dotfiles-master "$DOTPATH"
+</code></pre>
+
+</section>
+<section>
+
+<h2>dotfiles をインストールする仕組み</h2>
+
+<p>レポジトリに存在する . (ドット) から始まるファイル or ディレクトリに関して、<br>
+既存ファイルのバックアップを取って、ホームディレクトリにシンボリックリンクを貼る</p>
+
+</section>
+<section>
+
+<pre><code class="language-bash">    if [[ "$HOME" != "$dotdir" ]];then
+    for f in $dotdir/.??*; do
+      [[ `basename $f` == ".git" ]] &amp;&amp; continue
+      if [[ -L "$HOME/`basename $f`" ]];then
+        command rm -f "$HOME/`basename $f`"
+      fi
+      if [[ -e "$HOME/`basename $f`" ]];then
+        command mv --backup=numbered "$HOME/`basename $f`" "$HOME/.gdotbackup"
+      fi
+      command ln -snf $f $HOME
+    done
+</code></pre>
+
+<p><a href="https://github.com/hnishi/dotfiles/blob/50e37693a3f12dc2ff5e6f50257bd9ce75f6eabd/scripts/install.sh#L23-L33">code</a></p>
+
+</section>
+<section>
+
+<h3>TIPS</h3>
+
+<p>mv の –backup=numbered オプションをつければ、番号を振ってバックアップしてくれます。<br>
+私は最近知りました。</p>
+
+</section>
+<section>
+
+<h2>マルチプラットフォーム対応</h2>
+
+<pre><code class="language-bash">$ ls -a ~/.bashrc*
+/Users/hnishi/.bashrc
+/Users/hnishi/.bashrc_local
+/Users/hnishi/.bashrc_linux
+/Users/hnishi/.bashrc_mac
+</code></pre>
+
+</section>
+<section>
+
+<h2>bash 設定の読み込みの流れ</h2>
+
+<p><img src="images/source_tree.png" style="background:none; border:none; box-shadow:none;"></p>
+
+</section>
+<section>
+
+<h2>プロンプトのカスタマイズ</h2>
+
+<ul>
+  <li>あまりイケてない</li>
+  <li>exit status による色付け、実行時間、現在時刻など</li>
+</ul>
+
+<p><img src="images/ps1.png" style="background:none; border:none; box-shadow:none;"></p>
+
+</section>
+<section>
+
+<h2>プロンプトのカスタマイズ</h2>
+
+<p>bash だと PROMPT_COMMAND に関数を指定すると、プロンプト表示時に実行される。</p>
+
+<pre><code class="language-bash">dispatch () {
+  local EXIT_STATUS="$?" # 直前のコマンド実行結果のエラーコードを保存
+  timer_stop # 直前のコマンドの処理時間を図るためのタイマー(関数)
+  get_datetime # 現在時刻を取得する関数
+
+  local status_color="" # exit status によって色を変える
+  if [ $EXIT_STATUS != 0 ]; then
+    status_color=$PALE_RED
+  else
+    status_color=$DARK_GREEN
+  fi
+  export PS1="${GREEN}${PS1_USER}${WHITE}:${PALE_BLUE}\w${CYAN}$(__git_ps1) ${status_color} [exit: \$?] ${WHITE}[last: ${timer_show}s] [${prompt_datetime}]\n\$ "
+}
+export PROMPT_COMMAND=dispatch
+</code></pre>
+
+<p><a href="https://github.com/hnishi/dotfiles/blob/50e37693a3f12dc2ff5e6f50257bd9ce75f6eabd/.bashrc#L131-L155">code</a></p>
+
+</section>
+<section>
+
+<h2>結果</h2>
+
+<p>bash + {git,curl,wget}<br>
+があれば即座にインストールできます</p>
+
+</section>
+<section>
+
+<h2>bash だけでも TCP 通信ができるらしい</h2>
+
+<p>もしかすると、curl も使わなくてもいいのかもしれませんが、これは試してないです。</p>
+
+<pre><code class="language-bash">exec 3&lt;&gt;/dev/tcp/www.google.com/80
+echo -e "GET / HTTP/1.1\r\nhost: http://www.google.com\r\nConnection: close\r\n\r\n" &gt;&amp;3
+cat &lt;&amp;3
+</code></pre>
+
+<p><a href="https://www.linuxjournal.com/content/more-using-bashs-built-devtcp-file-tcpip">https://www.linuxjournal.com/content/more-using-bashs-built-devtcp-file-tcpip</a></p>
+
+</section>
+<section>
+
+<h2>使いやすいように template を作成しました</h2>
+
+<p>以下にあるコードをコピーすると、レポジトリに dotfiles を配置するだけで使えます<br>
+(bashのみ対応)。</p>
+
+<p><a href="https://github.com/hnishi/dotfiles/releases/tag/minimal-template-v0">https://github.com/hnishi/dotfiles/releases/tag/minimal-template-v0</a></p>
+
+</section>
+<section>
+
+<h2>まとめ</h2>
+
+<ul>
+  <li>dotfiles は育てていく感覚があって楽しい 😃</li>
+</ul>
+
+</section>
+<section>
+
+<h1>おまけ</h1>
+
+</section>
+<section>
+
+<h2>VS Code</h2>
+
+<p><a href="https://code.visualstudio.com/updates/v1_43#_settings-sync">Visual Studio Code が公式の設定ファイル同期ツールを発表</a><br>
+(現在 preview 版のみ)</p>
+
+<p>まだ使ったことないですが、期待。<br>
+マイクロソフトアカウントへの sign in が必要みたい。</p>
+
+<p><a href="https://code.visualstudio.com/docs/editor/settings-sync">https://code.visualstudio.com/docs/editor/settings-sync</a></p>
 
 </section>
 
