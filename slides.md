@@ -69,6 +69,8 @@ TODO: メリットについて話す
 
 ちょっと検索しただけでも、プログラマーごとに色が出過ぎている。
 
+[github で dotfiles を探すと色んな人の設定を覗くことができます。](https://github.com/search?q=dotfiles)
+
 ---
 
 ## たとえば
@@ -221,7 +223,7 @@ TODO: magicant さんの記事を引用する
 ## プロンプトのカスタマイズ
 
 - あまりイケてない
-- exit status による色付け、実行時間、現在時刻など
+- Gitのブランチ名、ステータスとコマンドの戻り値による色付け、実行時間、現在時刻など
 
 <img src="images/ps1.png" style="background:none; border:none; box-shadow:none;">
 
