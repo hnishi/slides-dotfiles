@@ -5,6 +5,8 @@
 <p>Date: 2020-04-15<br>
 Speaker: Hiroshi Nishigami (hnishi)</p>
 
+<p><img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/hnishi_icon.jpeg" style="background:none; border:none; box-shadow:none;"></p>
+
 </section>
 <section>
 
@@ -72,9 +74,20 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 </section>
 <section>
 
+<h2>dotfiles の何を話すのか</h2>
+
+<p>TODO: メリットについて話す</p>
+
+<p>「環境構築で消耗していませんか？」</p>
+
+</section>
+<section>
+
 <h2>管理手法が非常に多岐にわたっている</h2>
 
 <p>ちょっと検索しただけでも、プログラマーごとに色が出過ぎている。</p>
+
+<p><a href="https://github.com/search?q=dotfiles">github で dotfiles を探すと色んな人の設定を覗くことができます。</a></p>
 
 </section>
 <section>
@@ -210,7 +223,7 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 
 <h3>TIPS</h3>
 
-<p>mv の –backup=numbered オプションをつければ、番号を振ってバックアップしてくれます。<br>
+<p>mv の <code>--backup=numbered</code> オプションをつければ、番号を振ってバックアップしてくれます。<br>
 私は最近知りました。</p>
 
 </section>
@@ -230,7 +243,14 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 
 <h2>bash 設定の読み込みの流れ</h2>
 
-<p><img src="images/source_tree.png" style="background:none; border:none; box-shadow:none;"></p>
+<p><img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/source_tree.png" style="background:none; border:none; box-shadow:none;"></p>
+
+</section>
+<section>
+
+<h2>.bash_profile と .bashrc の違い</h2>
+
+<p>TODO: magicant さんの記事を引用する</p>
 
 </section>
 <section>
@@ -239,10 +259,10 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 
 <ul>
   <li>あまりイケてない</li>
-  <li>exit status による色付け、実行時間、現在時刻など</li>
+  <li>Gitのブランチ名、ステータスとコマンドの戻り値による色付け、実行時間、現在時刻など</li>
 </ul>
 
-<p><img src="images/ps1.png" style="background:none; border:none; box-shadow:none;"></p>
+<p><img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/ps1.png" style="background:none; border:none; box-shadow:none;"></p>
 
 </section>
 <section>
@@ -320,12 +340,59 @@ cat &lt;&amp;3
 
 <h2>VS Code</h2>
 
+<p>(PC ごとの path 等が設定ファイルに入ってくるので結構面倒)</p>
+
 <p><a href="https://code.visualstudio.com/updates/v1_43#_settings-sync">Visual Studio Code が公式の設定ファイル同期ツールを発表</a><br>
 (現在 preview 版のみ)</p>
 
-<p>まだ使ったことないですが、期待。<br>
+<p>まだ使ったことはないですが、期待。<br>
 マイクロソフトアカウントへの sign in が必要みたい。</p>
 
 <p><a href="https://code.visualstudio.com/docs/editor/settings-sync">https://code.visualstudio.com/docs/editor/settings-sync</a></p>
+
+</section>
+<section>
+
+<h2>おすすめの Theme</h2>
+
+<p>簡単に、プロンプトを設定</p>
+
+<ul>
+  <li>
+<a href="https://github.com/starship/starship">starship</a>
+    <ul>
+      <li>bash fish, zsh, powershell, Ion に対応</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a>
+    <ul>
+      <li>zsh のみ対応</li>
+    </ul>
+  </li>
+</ul>
+
+</section>
+<section>
+
+<h2>starship</h2>
+
+<video src="https://starship.rs/demo.webm" width="80%"></video>
+
+<p><a href="https://starship.rs/">https://starship.rs/</a></p>
+
+</section>
+<section>
+
+<h2>powerlevel10k</h2>
+
+<p><img src="https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png" width="70%" style="background:none; border:none; box-shadow:none;"></p>
+
+<p><a href="https://github.com/romkatv/powerlevel10k">https://github.com/romkatv/powerlevel10k</a></p>
+
+</section>
+<section>
+
+<p>TODO: <a href="https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E4%BB%8A%E3%81%99%E3%81%90%E3%81%AB%E3%81%A7%E3%82%82%E5%A7%8B%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E6%9C%80%E5%B0%8Fdotfiles%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E4%BB%8A%E3%81%99%E3%81%90%E3%81%AB%E3%81%A7%E3%82%82%E5%A7%8B%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E6%9C%80%E5%B0%8Fdotfiles%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9</a> 読んで内容をすこし引用する</p>
 
 </section>
