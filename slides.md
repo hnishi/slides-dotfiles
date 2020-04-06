@@ -3,6 +3,8 @@
 Date: 2020-04-15
 Speaker: Hiroshi Nishigami (hnishi)
 
+<img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/hnishi_icon.jpeg" style="background:none; border:none; box-shadow:none;">
+
 ---
 
 ## 近況
@@ -191,7 +193,7 @@ curl -L raw.githubusercontent.com/hnishi/dotfiles/master/scripts/download.sh | b
 
 ### TIPS
 
-mv の --backup=numbered オプションをつければ、番号を振ってバックアップしてくれます。
+mv の `--backup=numbered` オプションをつければ、番号を振ってバックアップしてくれます。
 私は最近知りました。
 
 ---
@@ -210,7 +212,7 @@ $ ls -a ~/.bashrc*
 
 ## bash 設定の読み込みの流れ
 
-<img src="images/source_tree.png" style="background:none; border:none; box-shadow:none;">
+<img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/source_tree.png" style="background:none; border:none; box-shadow:none;">
 
 ---
 
@@ -225,7 +227,7 @@ TODO: magicant さんの記事を引用する
 - あまりイケてない
 - Gitのブランチ名、ステータスとコマンドの戻り値による色付け、実行時間、現在時刻など
 
-<img src="images/ps1.png" style="background:none; border:none; box-shadow:none;">
+<img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/ps1.png" style="background:none; border:none; box-shadow:none;">
 
 ---
 

@@ -32,6 +32,12 @@ git clone https://github.com/hnishi/slides-dotfiles.git --branch gh-pages --sing
 
 - To see presentation mode, press `s` while you're viewing the slides
 
+- To change the path of image to public, do in vim
+
+```vim
+:%s;images/\(.*\).png;https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/\1.png;gc
+```
+
 ## References
 
 https://github.com/jedcn/reveal-ck
