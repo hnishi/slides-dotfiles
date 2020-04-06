@@ -3,7 +3,7 @@
 Date: 2020-04-15
 Speaker: Hiroshi Nishigami (hnishi)
 
-<img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/hnishi_icon.jpeg" style="background:none; border:none; box-shadow:none;">
+<img src="https://raw.githubusercontent.com/hnishi/slides-dotfiles/master/images/hnishi_icon.jpeg" width="10%" style="background:none; border:none; box-shadow:none;">
 
 ---
 
