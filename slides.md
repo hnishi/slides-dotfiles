@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles 入門
 
 Date: 2020-04-15
 Speaker: Hiroshi Nishigami (hnishi)
