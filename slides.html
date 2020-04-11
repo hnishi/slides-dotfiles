@@ -1,6 +1,6 @@
 <section>
 
-<h1>dotfiles</h1>
+<h1>dotfiles 入門</h1>
 
 <p>Date: 2020-04-15<br>
 Speaker: Hiroshi Nishigami (hnishi)</p>
@@ -23,14 +23,17 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 <h2>はじめに</h2>
 
 <p>最近（去年１２月頃⛄️）、 <a href="https://qiita.com/hnishi/items/28ad11df1dde8b0ed368">自分の dotfiles を整理した</a> ため、共有しようと思いました。<br>
-（+ 3 ヶ月くらい使ってみて、ちょっとだけノウハウがたまったので）</p>
+（+ 3 ヶ月くらい使ってみた感想）</p>
 
 </section>
 <section>
 
 <h2>対象</h2>
 
-<p>ターミナル (CLI) 初学者向けかもしれません。</p>
+<p>ターミナル (CLI) 初学者向け。<br>
+実は整理してる人少ないのではないかとおもっていたのですが、<br>
+もし「そんなの当たり前」レベルの話でしたら申し訳ありません。<br>
+作業効率化的な要素が強い話です。</p>
 
 </section>
 <section>
@@ -74,11 +77,22 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 </section>
 <section>
 
-<h2>dotfiles の何を話すのか</h2>
-
-<p>TODO: メリットについて話す</p>
+<h2>dotfiles が解決してくれること</h2>
 
 <p>「環境構築で消耗していませんか？」</p>
+
+<p>dotfilesを極めることで、どこで作業していても自分の環境を瞬時にサクっと作り出すことができる</p>
+
+</section>
+<section>
+
+<h2><a href="https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E7%89%B9%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AA%E4%BA%BA">特におすすめな人</a></h2>
+
+<blockquote>
+  <p>まぁつまり全エンジニアが対象だ！！！</p>
+</blockquote>
+
+<p>Ref: <a href="https://qiita.com/yutakatay/items/c6c7584d9795799ee164">ようこそdotfilesの世界へ</a></p>
 
 </section>
 <section>
@@ -99,6 +113,7 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
   <li><a href="https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2">make</a></li>
   <li><a href="https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789">ruby</a></li>
   <li><a href="https://pypi.org/project/dotfiles/">python</a></li>
+  <li><a href="https://qiita.com/eihigh/items/015d8885f56328cafd96">Ansible</a></li>
 </ul>
 
 </section>
@@ -108,7 +123,7 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 
 <ul>
   <li>最小構成のサーバーに対しても、すぐにdotfilesを展開できる</li>
-  <li>Mac, Linux, Windows (mintty) に対応</li>
+  <li>Mac, Linux (主に ubuntu), Windows (mintty) に対応</li>
 </ul>
 
 </section>
@@ -229,7 +244,7 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 </section>
 <section>
 
-<h2>マルチプラットフォーム対応</h2>
+<h2>クロスプラットフォーム対応</h2>
 
 <pre><code class="language-bash">$ ls -a ~/.bashrc*
 /Users/hnishi/.bashrc
@@ -248,9 +263,10 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 </section>
 <section>
 
-<h2>.bash_profile と .bashrc の違い</h2>
+<h2>
+<code>.bash_profile</code> と <code>.bashrc</code> の違い</h2>
 
-<p>TODO: magicant さんの記事を引用する</p>
+<p><a href="https://qiita.com/magicant/items/d3bb7ea1192e63fba850">本当に正しい .bashrc と .bash_profile の使ひ分け</a></p>
 
 </section>
 <section>
@@ -327,13 +343,35 @@ cat &lt;&amp;3
 <h2>まとめ</h2>
 
 <ul>
-  <li>dotfiles は育てていく感覚があって楽しい 😃</li>
+  <li>dotfiles は育てていく感覚があって楽しい</li>
+</ul>
+
+</section>
+<section>
+
+<h2>References</h2>
+
+<p>もっと高度な内容を知りたい方は、以下のリンクを参考にしてみて下さい。<br>
+(個人的にわかりやすかった記事)</p>
+
+<ul>
+  <li><a href="https://qiita.com/yutakatay/items/c6c7584d9795799ee164">ようこそdotfilesの世界へ</a></li>
+  <li><a href="https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2">最強の dotfiles 駆動開発と GitHub で管理する運用方法</a></li>
+  <li><a href="https://dotfiles.github.io/">dotfiles.github.io</a></li>
 </ul>
 
 </section>
 <section>
 
 <h1>おまけ</h1>
+
+</section>
+<section>
+
+<h2>yash</h2>
+
+<p>いろいろと調べていると弊社にいる magicant さんが <a href="https://yash.osdn.jp/">yash</a> なるシェルを開発していることを知りました。<br>
+あらためて ACCESS にはすごい技術者がいるものだと再認識しました。</p>
 
 </section>
 <section>
@@ -370,12 +408,20 @@ cat &lt;&amp;3
       <li>zsh のみ対応</li>
     </ul>
   </li>
+  <li>
+<a href="https://github.com/sindresorhus/pure">pure</a>
+    <ul>
+      <li>zsh</li>
+      <li>Go実装版: <a href="https://github.com/talal/mimir">mimir</a>
+</li>
+    </ul>
+  </li>
 </ul>
 
 </section>
 <section>
 
-<h2>starship</h2>
+<h2><code>starship</code></h2>
 
 <video src="https://starship.rs/demo.webm" width="80%"></video>
 
@@ -384,7 +430,7 @@ cat &lt;&amp;3
 </section>
 <section>
 
-<h2>powerlevel10k</h2>
+<h2><code>powerlevel10k</code></h2>
 
 <p><img src="https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png" width="70%" style="background:none; border:none; box-shadow:none;"></p>
 
@@ -393,6 +439,10 @@ cat &lt;&amp;3
 </section>
 <section>
 
-<p>TODO: <a href="https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E4%BB%8A%E3%81%99%E3%81%90%E3%81%AB%E3%81%A7%E3%82%82%E5%A7%8B%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E6%9C%80%E5%B0%8Fdotfiles%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E4%BB%8A%E3%81%99%E3%81%90%E3%81%AB%E3%81%A7%E3%82%82%E5%A7%8B%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E6%9C%80%E5%B0%8Fdotfiles%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9</a> 読んで内容をすこし引用する</p>
+<h2><code>pure</code></h2>
+
+<p><img src="https://github.com/sindresorhus/pure/raw/master/screenshot.png" width="70%" style="background:none; border:none; box-shadow:none;"></p>
+
+<p><a href="https://github.com/sindresorhus/pure">https://github.com/sindresorhus/pure</a></p>
 
 </section>
