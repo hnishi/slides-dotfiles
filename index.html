@@ -311,6 +311,12 @@ Speaker: Hiroshi Nishigami (hnishi)</p>
 <h2>
 <code>.bash_profile</code> と <code>.bashrc</code> の違い</h2>
 
+<ul>
+  <li>bashは、「ログインシェル」として起動すると~/.bash_profileを読み込む。</li>
+  <li>シェルがログインシェルではない形で起動する場合は、~/.bash_profileを読み込まない。</li>
+  <li>bashを対話的シェル（=スクリプト実行用ではないということ）として起動するときは、~/.bashrcを読み込む。</li>
+</ul>
+
 <p><a href="https://qiita.com/magicant/items/d3bb7ea1192e63fba850">本当に正しい .bashrc と .bash_profile の使ひ分け</a></p>
 
 </section>
