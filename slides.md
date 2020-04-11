@@ -350,7 +350,7 @@ https://code.visualstudio.com/docs/editor/settings-sync
   - zsh のみ対応
 - [pure](https://github.com/sindresorhus/pure)
   - zsh
-  - Go実装版: [mimir](https://github.com/talal/mimir)
+  - Go実装版 (クロスプラットフォーム): [mimir](https://github.com/talal/mimir)
 
 ---
 
