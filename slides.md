@@ -19,13 +19,16 @@ Speaker: Hiroshi Nishigami (hnishi)
 ## はじめに
 
 最近（去年１２月頃⛄️）、 [自分の dotfiles を整理した](https://qiita.com/hnishi/items/28ad11df1dde8b0ed368) ため、共有しようと思いました。
-（+ 3 ヶ月くらい使ってみて、ちょっとだけノウハウがたまったので）
+（+ 3 ヶ月くらい使ってみた感想）
 
 ---
 
 ## 対象
 
-ターミナル (CLI) 初学者向けかもしれません。
+ターミナル (CLI) 初学者向け。
+実は整理してる人少ないのではないかとおもっていたのですが、
+もし「そんなの当たり前」レベルの話でしたら申し訳ありません。
+作業効率化的な要素が強い話です。
 
 ---
 
@@ -59,11 +62,19 @@ https://thenextweb.com/dd/2019/06/04/why-does-macos-catalina-use-zsh-instead-of-
 
 ---
 
-## dotfiles の何を話すのか
-
-TODO: メリットについて話す
+## dotfiles が解決してくれること
 
 「環境構築で消耗していませんか？」
+
+dotfilesを極めることで、どこで作業していても自分の環境を瞬時にサクっと作り出すことができる
+
+---
+
+## [特におすすめな人](https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E7%89%B9%E3%81%AB%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AA%E4%BA%BA)
+
+> まぁつまり全エンジニアが対象だ！！！
+
+Ref: [ようこそdotfilesの世界へ](https://qiita.com/yutakatay/items/c6c7584d9795799ee164)
 
 ---
 
@@ -81,13 +92,14 @@ TODO: メリットについて話す
 - [make](https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2)
 - [ruby](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
 - [python](https://pypi.org/project/dotfiles/)
+- [Ansible](https://qiita.com/eihigh/items/015d8885f56328cafd96)
 
 ---
 
 ## 私の dotfiles 戦略
 
 - 最小構成のサーバーに対しても、すぐにdotfilesを展開できる
-- Mac, Linux, Windows (mintty) に対応
+- Mac, Linux (主に ubuntu), Windows (mintty) に対応
 
 ---
 
@@ -198,7 +210,7 @@ mv の `--backup=numbered` オプションをつければ、番号を振って�
 
 ---
 
-## マルチプラットフォーム対応
+## クロスプラットフォーム対応
 
 ```bash
 $ ls -a ~/.bashrc*
@@ -216,9 +228,9 @@ $ ls -a ~/.bashrc*
 
 ---
 
-## .bash_profile と .bashrc の違い
+## `.bash_profile` と `.bashrc` の違い
 
-TODO: magicant さんの記事を引用する
+[本当に正しい .bashrc と .bash_profile の使ひ分け](https://qiita.com/magicant/items/d3bb7ea1192e63fba850)
 
 ---
 
@@ -288,11 +300,29 @@ https://github.com/hnishi/dotfiles/releases/tag/minimal-template-v0
 
 ## まとめ
 
-- dotfiles は育てていく感覚があって楽しい 😃
+- dotfiles は育てていく感覚があって楽しい
+
+---
+
+## References
+
+もっと高度な内容を知りたい方は、以下のリンクを参考にしてみて下さい。
+(個人的にわかりやすかった記事)
+
+- [ようこそdotfilesの世界へ](https://qiita.com/yutakatay/items/c6c7584d9795799ee164)
+- [最強の dotfiles 駆動開発と GitHub で管理する運用方法](https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2)
+- [dotfiles.github.io](https://dotfiles.github.io/)
 
 ---
 
 # おまけ
+
+---
+
+## yash
+
+いろいろと調べていると弊社にいる magicant さんが [yash](https://yash.osdn.jp/) なるシェルを開発していることを知りました。
+あらためて ACCESS にはすごい技術者がいるものだと再認識しました。
 
 ---
 
@@ -318,10 +348,13 @@ https://code.visualstudio.com/docs/editor/settings-sync
   - bash fish, zsh, powershell, Ion に対応
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
   - zsh のみ対応
+- [pure](https://github.com/sindresorhus/pure)
+  - zsh
+  - Go実装版: [mimir](https://github.com/talal/mimir)
 
 ---
 
-## starship
+## `starship`
 
 <video src="https://starship.rs/demo.webm" width="80%"></video>
 
@@ -329,7 +362,7 @@ https://starship.rs/
 
 ---
 
-## powerlevel10k
+## `powerlevel10k`
 
 <img src="https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png" width="70%" style="background:none; border:none; box-shadow:none;">
 
@@ -337,4 +370,8 @@ https://github.com/romkatv/powerlevel10k
 
 ---
 
-TODO: https://qiita.com/yutakatay/items/c6c7584d9795799ee164#%E4%BB%8A%E3%81%99%E3%81%90%E3%81%AB%E3%81%A7%E3%82%82%E5%A7%8B%E3%82%81%E3%82%89%E3%82%8C%E3%82%8B%E6%9C%80%E5%B0%8Fdotfiles%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9 読んで内容をすこし引用する
+## `pure`
+
+<img src="https://github.com/sindresorhus/pure/raw/master/screenshot.png" width="70%" style="background:none; border:none; box-shadow:none;">
+
+https://github.com/sindresorhus/pure
