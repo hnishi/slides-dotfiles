@@ -230,6 +230,10 @@ $ ls -a ~/.bashrc*
 
 ## `.bash_profile` と `.bashrc` の違い
 
+- bashは、「ログインシェル」として起動すると~/.bash_profileを読み込む。
+- シェルがログインシェルではない形で起動する場合は、~/.bash_profileを読み込まない。
+- bashを対話的シェル（=スクリプト実行用ではないということ）として起動するときは、~/.bashrcを読み込む。
+
 [本当に正しい .bashrc と .bash_profile の使ひ分け](https://qiita.com/magicant/items/d3bb7ea1192e63fba850)
 
 ---
