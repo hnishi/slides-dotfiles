@@ -305,6 +305,9 @@ https://github.com/hnishi/dotfiles/releases/tag/minimal-template-v0
 ## まとめ
 
 - dotfiles は育てていく感覚があって楽しい
+- 他の環境への設定の同期が楽
+- docker 作業時、リモートサーバー作業時に便利
+- ハードウェアの引っ越しに身軽になれる
 
 ---
 
