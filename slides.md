@@ -328,7 +328,7 @@ https://github.com/hnishi/dotfiles/releases/tag/minimal-template-v0
 
 ## yash
 
-いろいろと調べていると弊社にいる magicant さんが [yash](https://yash.osdn.jp/) なるシェルを開発していることを知りました。
+いろいろと調べていると弊社にいる magicant さんが [yash](https://yash.osdn.jp/) なるPOSIX準拠のシェルを開発していることを知りました。
 あらためて ACCESS にはすごい技術者がいるものだと再認識しました。
 
 ---
