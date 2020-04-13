@@ -114,6 +114,8 @@ Ref: [ようこそdotfilesの世界へ](https://qiita.com/yutakatay/items/c6c758
 
 https://github.com/hnishi/dotfiles
 
+Please forgive me for the messy.
+
 ---
 
 ## 工夫
